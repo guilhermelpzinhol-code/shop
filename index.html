@@ -1,0 +1,3169 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bicicleta Elétrica VoltRide E-City Pro</title>
+  <meta name="description"
+    content="Bicicleta Elétrica VoltRide E-City Pro com motor 250W, autonomia até 60km. Envio grátis para todo Portugal.">
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #f5f5f5;
+  --card: #ffffff;
+  --text: #1a1a1a;
+  --text-muted: #6b7280;
+  --accent: #16a34a;
+  --accent-hover: #15803d;
+  --danger: #dc2626;
+  --border: #e5e7eb;
+  --trustpilot: #00b67a;
+  --star: #fbbf24;
+  --shadow: 0 1px 3px rgba(0, 0, 0, .08);
+  --shadow-lg: 0 4px 12px rgba(0, 0, 0, .1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 480px;
+  margin: 0 auto;
+  background: var(--card);
+  min-height: 100vh;
+  padding-bottom: 120px;
+}
+
+/* TOP BAR */
+.top-bar {
+  background: #1a1a1a;
+  color: #fff;
+  text-align: center;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: .3px;
+}
+
+.top-bar span {
+  color: #facc15;
+  font-weight: 700;
+}
+
+/* TRUST HEADER */
+.trust-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.trust-header .shield {
+  color: var(--accent);
+  font-size: 16px;
+}
+
+/* IMAGE CAROUSEL */
+.carousel {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  background: #fafafa;
+}
+
+.carousel-track {
+  display: flex;
+  height: 100%;
+  transition: transform .35s ease;
+}
+
+.carousel-track img {
+  min-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 0;
+}
+
+.carousel-dots .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #d1d5db;
+  cursor: pointer;
+  transition: all .2s;
+  border: none;
+}
+
+.carousel-dots .dot.active {
+  background: var(--text);
+  transform: scale(1.2);
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, .85);
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 2;
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background .2s;
+}
+
+.carousel-arrow:hover {
+  background: #fff;
+}
+
+.carousel-arrow.prev {
+  left: 10px;
+}
+
+.carousel-arrow.next {
+  right: 10px;
+}
+
+/* PRODUCT INFO */
+.product-info {
+  padding: 16px;
+}
+
+.product-badge {
+  display: inline-block;
+  background: #fef3c7;
+  color: #92400e;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  margin-bottom: 8px;
+}
+
+.product-title {
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 6px;
+}
+
+.product-rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+  font-size: 13px;
+}
+
+.product-rating .stars {
+  color: var(--star);
+  letter-spacing: 1px;
+}
+
+.product-rating .count {
+  color: var(--text-muted);
+}
+
+.price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.price-current {
+  font-size: 28px;
+  font-weight: 800;
+  color: #1a1a1a;
+}
+
+.price-original {
+  font-size: 16px;
+  color: var(--text-muted);
+  text-decoration: line-through;
+}
+
+.price-discount {
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  background: var(--danger);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.price-installment {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+
+/* URGENCY */
+.urgency-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 14px;
+  font-size: 13px;
+  color: var(--danger);
+  font-weight: 600;
+}
+
+.urgency-bar .icon {
+  font-size: 18px;
+}
+
+.stock-bar {
+  height: 6px;
+  background: #fecaca;
+  border-radius: 3px;
+  margin-top: 6px;
+  overflow: hidden;
+  flex: 1;
+}
+
+.stock-fill {
+  height: 100%;
+  background: var(--danger);
+  border-radius: 3px;
+  width: 18%;
+  transition: width 1s;
+}
+
+/* VARIANTS */
+.variant-section {
+  margin-bottom: 14px;
+}
+
+.variant-label {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #1a1a1a;
+}
+
+.variant-options {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.variant-btn {
+  padding: 8px 16px;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .2s;
+  color: #1a1a1a;
+}
+
+.variant-btn.active {
+  border-color: #1a1a1a;
+  background: #f5f5f5;
+  color: #1a1a1a;
+}
+
+/* QUANTITY */
+.qty-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.qty-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.qty-control {
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.qty-btn {
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: #f9fafb;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background .2s;
+}
+
+.qty-btn:hover {
+  background: #e5e7eb;
+}
+
+.qty-value {
+  width: 40px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  border: none;
+  background: transparent;
+}
+
+/* BUY BUTTON */
+.buy-section {
+  padding: 0 16px;
+}
+
+.buy-btn {
+  width: 100%;
+  padding: 16px;
+  background: #1a1a1a;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all .2s;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, .25);
+}
+
+.buy-btn:hover {
+  background: #333;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, .3);
+}
+
+/* PAYMENT ICONS ROW (below buy button) */
+.payment-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px 0;
+  flex-wrap: wrap;
+}
+
+.payment-row img {
+  height: 28px;
+  width: auto;
+  border-radius: 4px;
+}
+
+.buy-btn .lock {
+  font-size: 14px;
+}
+
+/* BENEFITS */
+.benefits {
+  display: flex;
+  justify-content: space-around;
+  padding: 16px;
+  border-top: 1px solid var(--border);
+  margin-top: 16px;
+}
+
+.benefit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: var(--text-muted);
+  text-align: center;
+  font-weight: 500;
+}
+
+.benefit .b-icon {
+  font-size: 22px;
+}
+
+/* DESCRIPTION TABS */
+.desc-section {
+  padding: 16px;
+  border-top: 8px solid var(--bg);
+}
+
+.desc-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.desc-content {
+  font-size: 14px;
+  color: #374151;
+  line-height: 1.7;
+}
+
+.desc-content ul {
+  padding-left: 20px;
+  margin: 8px 0;
+}
+
+.desc-content li {
+  margin-bottom: 6px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 14px 0;
+}
+
+.feature-card {
+  background: #f9fafb;
+  border-radius: 10px;
+  padding: 14px;
+  text-align: center;
+}
+
+.feature-card .f-icon {
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+
+.feature-card .f-title {
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.feature-card .f-desc {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+/* TRUSTPILOT SECTION */
+.reviews-section {
+  padding: 16px;
+  border-top: 8px solid var(--bg);
+}
+
+.tp-header {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.tp-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.tp-logo .tp-star {
+  color: var(--trustpilot);
+}
+
+.tp-overall {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.tp-stars-big {
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+  margin-bottom: 6px;
+}
+
+  .tp-star-box {
+    width: 24px;
+    height: 24px;
+    background: var(--trustpilot);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 2px;
+  }
+
+  .tp-stars-inline {
+    display: inline-flex;
+    gap: 2px;
+    vertical-align: middle;
+    margin-right: 4px;
+  }
+
+  .tp-star-mini {
+    width: 18px;
+    height: 18px;
+    background: var(--trustpilot);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 11px;
+    border-radius: 1px;
+  }
+
+.tp-count {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.tp-count strong {
+  color: var(--text);
+}
+
+/* REVIEW CARDS */
+.review-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 12px;
+}
+
+.review-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.review-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+
+.review-meta {
+  flex: 1;
+}
+
+.review-name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.review-date {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.review-verified {
+  font-size: 11px;
+  color: var(--accent);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.review-stars {
+  color: var(--star);
+  font-size: 13px;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.review-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.review-text {
+  font-size: 13px;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.show-more-reviews {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  background: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--text);
+  transition: all .2s;
+  margin-top: 4px;
+}
+
+.show-more-reviews:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* PAYMENT METHODS */
+.payment-section {
+  padding: 16px;
+  border-top: 8px solid var(--bg);
+  text-align: center;
+}
+
+.payment-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.payment-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.payment-icon {
+  height: 32px;
+  padding: 4px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-muted);
+  min-width: 52px;
+}
+
+.payment-icon img {
+  height: 22px;
+  width: auto;
+}
+
+/* STICKY BOTTOM BAR */
+.sticky-bar {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 480px;
+  background: #fff;
+  border-top: 1px solid var(--border);
+  padding: 12px 16px;
+  z-index: 100;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, .08);
+  display: none;
+}
+
+.sticky-bar.visible {
+  display: block;
+}
+
+.sticky-bar .buy-btn {
+  margin: 0;
+}
+
+.sticky-bar-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.sticky-bar-price {
+  font-size: 18px;
+  font-weight: 800;
+  color: #1a1a1a;
+}
+
+.sticky-bar-original {
+  font-size: 13px;
+  color: var(--text-muted);
+  text-decoration: line-through;
+}
+
+/* GUARANTEE */
+.guarantee-section {
+  padding: 16px;
+  border-top: 8px solid var(--bg);
+  text-align: center;
+}
+
+.guarantee-icon {
+  font-size: 40px;
+  margin-bottom: 8px;
+}
+
+.guarantee-title {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.guarantee-text {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* FAQ */
+.faq-section {
+  padding: 16px;
+  border-top: 8px solid var(--bg);
+}
+
+.faq-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.faq-item {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+
+.faq-question {
+  padding: 14px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  transition: background .2s;
+}
+
+.faq-question:hover {
+  background: #f9fafb;
+}
+
+.faq-answer {
+  padding: 0 14px;
+  max-height: 0;
+  overflow: hidden;
+  transition: all .3s ease;
+  font-size: 13px;
+  color: #4b5563;
+  line-height: 1.7;
+}
+
+.faq-item.open .faq-answer {
+  padding: 0 14px 14px;
+  max-height: 300px;
+}
+
+.faq-item.open .faq-chevron {
+  transform: rotate(180deg);
+}
+
+.faq-chevron {
+  transition: transform .3s;
+  font-size: 12px;
+}
+
+
+  /* RODAPÉ FIXO */
+  .footer {
+    padding: 24px 16px;
+    text-align: center;
+    border-top: 8px solid var(--bg);
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 40px;
+  }
+
+  .footer p {
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .footer p:first-child {
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  /* FOOTER */
+.footer {
+  padding: 24px 16px;
+  text-align: center;
+  border-top: 8px solid var(--bg);
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* ANIMATIONS */
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: .6;
+  }
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+  .benefits-list {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0;
+    font-size: 14px;
+    color: #1a1a1a;
+  }
+  .benefits-list li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+  .benefits-list li svg {
+    color: var(--trustpilot);
+    width: 18px;
+    height: 18px;
+  }
+  
+  .payment-row-new {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+  }
+  .payment-box {
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    padding: 4px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    min-width: 45px;
+    height: 30px;
+  }
+  .payment-box img {
+    max-height: 20px;
+    max-width: 100%;
+    object-fit: contain;
+  }
+
+  .desc-product-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 24px 16px 12px;
+    color: #1a1a1a;
+  }
+  .desc-card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 0 16px 16px;
+  }
+  .desc-card-title {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    line-height: 1.3;
+  }
+  .desc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 16px;
+  }
+  .desc-item {
+    background: #f9fafb;
+    border-radius: 8px;
+    padding: 12px;
+  }
+  .desc-item-title {
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .desc-item-text {
+    font-size: 12px;
+    color: #6b7280;
+  }
+  .check-list {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0;
+  }
+  .check-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 8px;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+  .check-list li::before {
+    content: "✅";
+    font-size: 14px;
+  }
+  strong {
+    font-weight: 800;
+    letter-spacing: 0.3px;
+  }
+  
+  .desc-card-title {
+    font-weight: 800;
+    letter-spacing: 0.5px;
+  }
+  
+  .review-title {
+    font-weight: 800;
+  }
+  
+  .product-title {
+    font-weight: 900;
+  }
+  
+  .variant-label {
+    font-weight: 800;
+  }
+  
+  .desc-item-title {
+    font-weight: 800;
+  }
+
+
+
+  :root {
+    --trustpilot: #00b67a;
+    --tp-dark: #1c1c1c;
+    --tp-gray: #f1f1f1;
+    --tp-text-muted: #6b7280;
+  }
+
+  .tp-star-box {
+    width: 20px;
+    height: 20px;
+    background: var(--trustpilot);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 2px;
+    margin-right: 2px;
+  }
+
+  .tp-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--tp-dark);
+  }
+
+  .tp-star-icon {
+    color: var(--trustpilot);
+    font-size: 20px;
+  }
+
+  /* GRÁFICO DE AVALIAÇÕES */
+  .reviews-summary-card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .summary-header {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--tp-dark);
+  }
+
+  .summary-tp-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 4px;
+  }
+
+  .summary-stats {
+    font-size: 14px;
+    color: var(--tp-text-muted);
+    margin-bottom: 20px;
+  }
+
+  .rating-attribute {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: var(--tp-dark);
+  }
+
+  .attribute-stars {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .notes-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 20px 0 12px;
+    color: var(--tp-dark);
+  }
+
+  .bar-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 13px;
+  }
+
+  .bar-label {
+    width: 100px;
+    color: var(--tp-dark);
+  }
+
+  .bar-container {
+    flex: 1;
+    height: 6px;
+    background: var(--tp-gray);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .bar-fill {
+    height: 100%;
+    background: #1c1c1c;
+  }
+
+  .bar-percent {
+    width: 30px;
+    text-align: right;
+    color: var(--tp-text-muted);
+  }
+
+
+  /* FAQ RESPONSIVO */
+  .faq-section {
+    padding: 16px;
+    border-top: 8px solid var(--bg);
+  }
+
+  .faq-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+
+  .faq-item {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 8px;
+    overflow: hidden;
+  }
+
+  .faq-question {
+    padding: 14px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    transition: background .2s;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .faq-question:hover {
+    background: #f9fafb;
+  }
+
+  .faq-answer {
+    padding: 0 14px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all .3s ease;
+    font-size: 12px;
+    color: #4b5563;
+    line-height: 1.7;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .faq-item.open .faq-answer {
+    padding: 0 14px 14px;
+    max-height: 500px;
+  }
+
+  .faq-item.open .faq-chevron {
+    transform: rotate(180deg);
+  }
+
+  .faq-chevron {
+    transition: transform .3s;
+    font-size: 12px;
+    flex-shrink: 0;
+  }
+
+
+
+
+  
+  /* HEADER STICKY */
+  .header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    background: #fff;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 12px 16px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 56px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .header-icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s ease;
+    position: relative;
+    width: 40px;
+    height: 40px;
+  }
+
+  .header-icon-btn svg {
+    width: 22px;
+    height: 22px;
+    stroke: #000;
+    stroke-width: 1.5;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .cart-badge {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    background: #000 !important;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+  }
+
+  /* REMOVER MARGIN-TOP DO CONTAINER PARA STICKY FUNCIONAR CORRETAMENTE */
+  .container {
+    margin-top: 0 !important;
+  }
+
+  @media (max-width: 480px) {
+    .header {
+      padding: 10px 12px;
+    }
+    .header-icon-btn {
+      width: 36px;
+      height: 36px;
+    }
+    .header-icon-btn svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+
+    .header-right {
+      gap: 16px;
+    }
+
+    .header-icon-btn {
+      width: 36px;
+      height: 36px;
+    }
+
+    .header-icon-btn svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .header-icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s ease;
+    position: relative;
+    width: 40px;
+    height: 40px;
+  }
+
+  .header-icon-btn:active {
+    opacity: 0.6;
+  }
+
+  .header-icon-btn svg {
+    width: 22px;
+    height: 22px;
+    stroke: #1a1a1a;
+    stroke-width: 1.5;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .cart-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #1a1a1a;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* RESPONSIVO MOBILE */
+  @media (max-width: 480px) {
+    .header {
+      padding: 10px 12px;
+    }
+
+    .header-right {
+      gap: 16px;
+    }
+
+    .header-icon-btn {
+      width: 36px;
+      height: 36px;
+    }
+
+    .header-icon-btn svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+
+</style>
+  <style>
+    .review-card.hidden {
+      display: none
+    }
+  
+  .benefits-list {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0;
+    font-size: 14px;
+    color: #1a1a1a;
+  }
+  .benefits-list li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+  .benefits-list li svg {
+    color: var(--trustpilot);
+    width: 18px;
+    height: 18px;
+  }
+  
+  .payment-row-new {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+  }
+  .payment-box {
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    padding: 4px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    min-width: 45px;
+    height: 30px;
+  }
+  .payment-box img {
+    max-height: 20px;
+    max-width: 100%;
+    object-fit: contain;
+  }
+
+  .desc-product-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 24px 16px 12px;
+    color: #1a1a1a;
+  }
+  .desc-card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 0 16px 16px;
+  }
+  .desc-card-title {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    line-height: 1.3;
+  }
+  .desc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 16px;
+  }
+  .desc-item {
+    background: #f9fafb;
+    border-radius: 8px;
+    padding: 12px;
+  }
+  .desc-item-title {
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .desc-item-text {
+    font-size: 12px;
+    color: #6b7280;
+  }
+  .check-list {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0;
+  }
+  .check-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 8px;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+  .check-list li::before {
+    content: "✅";
+    font-size: 14px;
+  }
+  strong {
+    font-weight: 800;
+    letter-spacing: 0.3px;
+  }
+  
+  .desc-card-title {
+    font-weight: 800;
+    letter-spacing: 0.5px;
+  }
+  
+  .review-title {
+    font-weight: 800;
+  }
+  
+  .product-title {
+    font-weight: 900;
+  }
+  
+  .variant-label {
+    font-weight: 800;
+  }
+  
+  .desc-item-title {
+    font-weight: 800;
+  }
+
+
+
+  :root {
+    --trustpilot: #00b67a;
+    --tp-dark: #1c1c1c;
+    --tp-gray: #f1f1f1;
+    --tp-text-muted: #6b7280;
+  }
+
+  .tp-star-box {
+    width: 20px;
+    height: 20px;
+    background: var(--trustpilot);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 2px;
+    margin-right: 2px;
+  }
+
+  .tp-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--tp-dark);
+  }
+
+  .tp-star-icon {
+    color: var(--trustpilot);
+    font-size: 20px;
+  }
+
+  /* GRÁFICO DE AVALIAÇÕES */
+  .reviews-summary-card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .summary-header {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--tp-dark);
+  }
+
+  .summary-tp-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 4px;
+  }
+
+  .summary-stats {
+    font-size: 14px;
+    color: var(--tp-text-muted);
+    margin-bottom: 20px;
+  }
+
+  .rating-attribute {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: var(--tp-dark);
+  }
+
+  .attribute-stars {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .notes-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 20px 0 12px;
+    color: var(--tp-dark);
+  }
+
+  .bar-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 13px;
+  }
+
+  .bar-label {
+    width: 100px;
+    color: var(--tp-dark);
+  }
+
+  .bar-container {
+    flex: 1;
+    height: 6px;
+    background: var(--tp-gray);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .bar-fill {
+    height: 100%;
+    background: #1c1c1c;
+  }
+
+  .bar-percent {
+    width: 30px;
+    text-align: right;
+    color: var(--tp-text-muted);
+  }
+
+
+  /* FAQ RESPONSIVO */
+  .faq-section {
+    padding: 16px;
+    border-top: 8px solid var(--bg);
+  }
+
+  .faq-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+
+  .faq-item {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 8px;
+    overflow: hidden;
+  }
+
+  .faq-question {
+    padding: 14px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    transition: background .2s;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .faq-question:hover {
+    background: #f9fafb;
+  }
+
+  .faq-answer {
+    padding: 0 14px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all .3s ease;
+    font-size: 12px;
+    color: #4b5563;
+    line-height: 1.7;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .faq-item.open .faq-answer {
+    padding: 0 14px 14px;
+    max-height: 500px;
+  }
+
+  .faq-item.open .faq-chevron {
+    transform: rotate(180deg);
+  }
+
+  .faq-chevron {
+    transition: transform .3s;
+    font-size: 12px;
+    flex-shrink: 0;
+  }
+
+
+  
+  /* HEADER STICKY */
+  .header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    background: #fff;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 12px 16px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 56px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .header-icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s ease;
+    position: relative;
+    width: 40px;
+    height: 40px;
+  }
+
+  .header-icon-btn svg {
+    width: 22px;
+    height: 22px;
+    stroke: #000;
+    stroke-width: 1.5;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .cart-badge {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    background: #000 !important;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+  }
+
+  /* REMOVER MARGIN-TOP DO CONTAINER PARA STICKY FUNCIONAR CORRETAMENTE */
+  .container {
+    margin-top: 0 !important;
+  }
+
+  @media (max-width: 480px) {
+    .header {
+      padding: 10px 12px;
+    }
+    .header-icon-btn {
+      width: 36px;
+      height: 36px;
+    }
+    .header-icon-btn svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+
+    .header-icon-btn {
+      width: 36px;
+      height: 36px;
+    }
+
+    .header-icon-btn svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+</style>
+</head>
+
+<body>
+    <!-- HEADER STICKY -->
+  <div class="header">
+    <div class="header-right">
+      <button class="header-icon-btn" title="Buscar">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.35-4.35"></path>
+        </svg>
+      </button>
+      <button class="header-icon-btn" title="Perfil">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+      </button>
+      <button class="header-icon-btn" title="Sacola" style="position: relative;">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+          <path d="M3 6h18"></path>
+          <path d="M16 10a4 4 0 0 1-8 0"></path>
+        </svg>
+        <span class="cart-badge">0</span>
+      </button>
+    </div>
+  </div>
+  </div>
+
+  <div class="container">
+
+    <!-- TOP BAR -->
+    <div class="top-bar">OFERTA ESPECIAL — Envio Grátis para todo Portugal</div>
+
+    <!-- TRUST HEADER -->
+    <div class="trust-header">
+      <div class="tp-stars-inline">
+        <div class="tp-star-mini">★</div>
+        <div class="tp-star-mini">★</div>
+        <div class="tp-star-mini">★</div>
+        <div class="tp-star-mini">★</div>
+        <div class="tp-star-mini">★</div>
+      </div>
+      4,8 / 5 • 57 avaliações
+    </div>
+
+    <!-- IMAGE CAROUSEL -->
+    <div class="carousel">
+      <button class="carousel-arrow prev" aria-label="Anterior">‹</button>
+      <div class="carousel-track">
+        <img src="https://i.imgur.com/dDkqsuB.png" alt="Bicicleta Elétrica VoltRide - Vista lateral" loading="eager">
+        <img src="https://i.imgur.com/SKkHWQ4.png" alt="Bicicleta Elétrica VoltRide - Detalhe motor" loading="lazy">
+        <img src="https://i.imgur.com/HAx7exi.png" alt="Bicicleta Elétrica VoltRide - Em utilização" loading="lazy">
+        <img src="https://i.imgur.com/UnkHwTA.png" alt="Bicicleta Elétrica VoltRide - Acessórios" loading="lazy">
+      </div>
+      <button class="carousel-arrow next" aria-label="Seguinte">›</button>
+    </div>
+    <div class="carousel-dots">
+      <button class="dot active" aria-label="Imagem 1"></button>
+      <button class="dot" aria-label="Imagem 2"></button>
+      <button class="dot" aria-label="Imagem 3"></button>
+      <button class="dot" aria-label="Imagem 4"></button>
+    </div>
+
+    <!-- PRODUCT INFO -->
+    <div class="product-info">
+      <span class="product-badge">Mais Vendida 2025</span>
+      <h1 class="product-title">Bicicleta Elétrica VoltRide E-City Pro — Motor 250W, Autonomia 60km</h1>
+      <div class="product-rating">
+        <div class="tp-stars-inline">
+          <div class="tp-star-mini">★</div>
+          <div class="tp-star-mini">★</div>
+          <div class="tp-star-mini">★</div>
+          <div class="tp-star-mini">★</div>
+          <div class="tp-star-mini">★</div>
+        </div>
+        <span class="count">TrustScore 4.8 | 57 avaliações</span>
+      </div>
+      
+      <ul class="benefits-list">
+        <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg> Envio Gratuito</li>
+        <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg> Pagamento Simples e Seguro</li>
+        <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg> Apoio ao Cliente 24/7</li>
+      </ul>
+    <div class="price-row">
+        <span class="price-current">69,90€</span>
+        <span class="price-original">129,90€</span>
+        <span class="price-discount">-46%</span>
+      </div>
+      <div class="price-installment">ou 3x de 23,30€ sem juros</div>
+
+      <!-- URGENCY -->
+      <div class="urgency-bar">
+        <span class="icon pulse">🔥</span>
+        <div>
+          <div>Atenção: Restam apenas <strong>7 unidades</strong> em stock!</div>
+          <div class="stock-bar">
+            <div class="stock-fill"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANT: COLOR -->
+      <div class="variant-section">
+        <div class="variant-label">Cor:</div>
+        <div class="variant-options">
+          <button class="variant-btn active">Preto Mate</button>
+          <button class="variant-btn">Branco Pérola</button>
+          <button class="variant-btn">Azul Oceano</button>
+        </div>
+      </div>
+
+      <!-- QUANTITY -->
+      <div class="qty-section">
+        <span class="qty-label">Quantidade:</span>
+        <div class="qty-control">
+          <button class="qty-btn" id="qty-minus">−</button>
+          <span class="qty-value" id="qty-value">1</span>
+          <button class="qty-btn" id="qty-plus">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="buy-section">
+      <button class="buy-btn" onclick="alert('Redirecionando para pagamento seguro...')">
+        Comprar agora
+      </button>
+      
+      <div class="payment-row-new">
+        <div class="payment-box"><img src="https://img.icons8.com/color/48/visa.png" alt="Visa"></div>
+        <div class="payment-box"><img src="https://img.icons8.com/color/48/mastercard-logo.png" alt="Mastercard"></div>
+        <div class="payment-box"><img src="https://img.icons8.com/color/48/amex.png" alt="Amex"></div>
+        <div class="payment-box"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal"></div>
+        <div class="payment-box"><img src="https://img.icons8.com/color/48/apple-pay.png" alt="Apple Pay"></div>
+        <div class="payment-box"><img src="https://img.icons8.com/color/48/google-pay.png" alt="Google Pay"></div>
+      </div>
+    
+    </div>
+
+    <!-- BENEFITS -->
+    <div class="benefits">
+      <div class="benefit"><span class="b-icon">✈</span>Envio Grátis<br>Portugal</div>
+      <div class="benefit"><span class="b-icon">↩</span>Devolução<br>30 Dias</div>
+      <div class="benefit"><span class="b-icon">✓</span>Garantia<br>2 Anos</div>
+      <div class="benefit"><span class="b-icon">☎</span>Suporte<br>Nacional</div>
+    </div>
+
+    <!-- DESCRIPTION -->
+
+    <h3 class="desc-product-title">Descrição do produto</h3>
+    
+    <div class="desc-card">
+      <div class="desc-card-title">Bicicleta Elétrica VoltRide E-City Pro — Mobilidade urbana por 69€</div>
+      <p style="font-size:13px; color:#4b5563; line-height:1.5;"><strong>Leve, robusta e segura</strong> — ideal para deslocações curtas em Portugal, com travões duplos, luzes LED e motor potente. A VoltRide E-City Pro é a escolha perfeita para quem quer mobilidade urbana eficiente, económica e ecológica. Com um motor de 250W brushless, oferece uma experiência de condução suave e silenciosa, perfeita para deslocações diárias casa-trabalho, universidade ou pequenas rotas de lazer.</p>
+      <p style="font-size:13px; color:#4b5563; line-height:1.5; margin-top:10px;"><strong>Autonomia impressionante até 60km</strong> permite que viaje sem preocupações durante toda a semana. A bateria de lítio de alta capacidade carrega-se completamente em apenas 4-5 horas, e pode ser removida facilmente para carregar em qualquer tomada. Com o modo Eco, consegue estender ainda mais a autonomia e poupar energia.</p>
+      <div class="desc-grid">
+        <div class="desc-item">
+          <div class="desc-item-title">Conforto na condução</div>
+          <div class="desc-item-text">Rodas pneumáticas de 27.5" com suspensão dianteira para melhor absorção de impacto em diferentes superfícies.</div>
+        </div>
+        <div class="desc-item">
+          <div class="desc-item-title">Segurança completa</div>
+          <div class="desc-item-text">Travões de disco duplos, luzes LED frontal e traseira, refletores e buzina integrada.</div>
+        </div>
+      </div>
+      <p style="font-size:13px; color:#4b5563; line-height:1.5; margin-top:10px;"><strong>4 modos de velocidade</strong> para cada situação: Pedestre (5 km/h), Eco (10 km/h), Drive (20 km/h) e Sport (25 km/h). Escolha o modo que melhor se adapta ao seu percurso e às condições da estrada.</p>
+      
+      <div class="desc-grid">
+        <div class="desc-item">
+          <div class="desc-item-title">Destaques rápidos</div>
+          <ul class="check-list">
+            <li>Velocidade até 25 km/h</li>
+            <li>Autonomia até 60 km</li>
+            <li>Motor 250W Brushless</li>
+            <li>Rodas 27.5" anti-furo</li>
+            <li>Travões de disco</li>
+          </ul>
+        </div>
+        <div class="desc-item" style="background:#0f172a; color:#fff;">
+          <div class="desc-item-title" style="color:#fff;">Oferta</div>
+          <p style="font-size:12px; margin-bottom:8px;"><strong>Preço especial:</strong> 69€</p>
+          <p style="font-size:12px; margin-bottom:8px;"><strong>Stock limitado</strong> (promoção por tempo limitado)</p>
+          <p style="font-size:12px;">Entrega rápida em Portugal*</p>
+          <p style="font-size:10px; color:#94a3b8; margin-top:8px;">*Prazos podem variar conforme a zona.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="desc-card">
+      <div class="desc-card-title">Conduz com mais confiança e segurança</div>
+      <p style="font-size:13px; color:#4b5563; line-height:1.5;">A VoltRide E-City Pro foi pensada para o dia a dia na cidade: iluminação completa, travagem eficiente e modos de condução para se adaptar a cada situação urbana.</p>
+    </div>
+
+    <div class="desc-card">
+      <div class="desc-card-title">Potência e autonomia para deslocações urbanas</div>
+      <p style="font-size:13px; color:#4b5563; line-height:1.5; margin-bottom:12px;">Perfeita para deslocações casa-trabalho, universidade ou pequenas rotas diárias — com resposta rápida e condução confortável.</p>
+      <div class="desc-grid">
+        <div class="desc-item">
+          <div class="desc-item-title">Motor eficiente</div>
+          <div class="desc-item-text">250W para uma condução fluida em cidade.</div>
+        </div>
+        <div class="desc-item">
+          <div class="desc-item-title">Autonomia</div>
+          <div class="desc-item-text">Até 60 km (pode variar com peso e terreno).</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="desc-card">
+      <div class="desc-card-title">Destaques técnicos</div>
+      <ul class="check-list">
+        <li><strong>Peso:</strong> 22 kg</li>
+        <li><strong>Carga máxima:</strong> 120 kg</li>
+        <li><strong>Dimensões:</strong> 175 x 65 x 110 cm</li>
+      </ul>
+    </div>
+
+    <div class="desc-card">
+      <div class="desc-card-title">O que recebes</div>
+      <ul class="check-list">
+        <li>1x Bicicleta Elétrica VoltRide E-City Pro</li>
+        <li>1x Carregador rápido</li>
+        <li>1x Manual de utilização em PT</li>
+        <li>1x Kit de ferramentas de montagem</li>
+      </ul>
+    </div>
+
+    <!-- GUARANTEE -->
+    <div class="guarantee-section">
+      <div class="guarantee-icon">✓</div>
+      <div class="guarantee-title">Garantia de Satisfação 30 Dias</div>
+      <div class="guarantee-text">Se não ficar completamente satisfeito(a), devolvemos o seu dinheiro. Sem perguntas,
+        sem complicações. A sua confiança é a nossa prioridade.</div>
+    </div>
+
+    <!-- TRUSTPILOT REVIEWS -->
+    
+    <div class="reviews-section">
+      <div class="reviews-summary-card">
+        <div class="summary-header">Avaliações dos clientes</div>
+        
+        <div class="summary-tp-row">
+          <div class="tp-stars-inline">
+            <div class="tp-star-box">★</div>
+            <div class="tp-star-box">★</div>
+            <div class="tp-star-box">★</div>
+            <div class="tp-star-box">★</div>
+            <div class="tp-star-box">★</div>
+          </div>
+          <div class="tp-logo-container">
+            <span class="tp-star-icon">★</span>
+            <span>Trustpilot</span>
+          </div>
+        </div>
+        
+        <div class="summary-stats">4,8 / 5 • 57 avaliações</div>
+        
+        <div class="rating-attribute">
+          <span>Qualidade</span>
+          <div class="attribute-stars">
+            <div class="tp-stars-inline">
+              <div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div>
+              <div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div>
+              <div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div>
+              <div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div>
+              <div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div>
+            </div>
+            <span style="color: #6b7280;">4,8 / 5</span>
+          </div>
+        </div>
+        
+        <div class="rating-attribute">
+          <span>Custo-benefício</span>
+          <div class="attribute-stars">
+            <div class="tp-stars-inline">
+              <div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div>
+              <div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div>
+              <div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div>
+              <div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div>
+              <div class="tp-star-box" style="width:14px; height:14px; font-size:9px; background:#ccc;">★</div>
+            </div>
+            <span style="color: #6b7280;">4,6 / 5</span>
+          </div>
+        </div>
+        
+        <div class="notes-title">Notas 57</div>
+        
+        <div class="bar-row">
+          <div class="bar-label">Excelente</div>
+          <div class="bar-container"><div class="bar-fill" style="width: 81%;"></div></div>
+          <div class="bar-percent">81%</div>
+        </div>
+        
+        <div class="bar-row">
+          <div class="bar-label">Muito bom</div>
+          <div class="bar-container"><div class="bar-fill" style="width: 19%;"></div></div>
+          <div class="bar-percent">19%</div>
+        </div>
+        
+        <div class="bar-row">
+          <div class="bar-label">Médio</div>
+          <div class="bar-container"><div class="bar-fill" style="width: 0%;"></div></div>
+          <div class="bar-percent">0%</div>
+        </div>
+        
+        <div class="bar-row">
+          <div class="bar-label">Insuficiente</div>
+          <div class="bar-container"><div class="bar-fill" style="width: 0%;"></div></div>
+          <div class="bar-percent">0%</div>
+        </div>
+        
+        <div class="bar-row">
+          <div class="bar-label">Muito insuficiente</div>
+          <div class="bar-container"><div class="bar-fill" style="width: 0%;"></div></div>
+          <div class="bar-percent">0%</div>
+        </div>
+      </div>
+
+        <div class="tp-stars-big">
+          <div class="tp-star-box">★</div>
+          <div class="tp-star-box">★</div>
+          <div class="tp-star-box">★</div>
+          <div class="tp-star-box">★</div>
+          <div class="tp-star-box">★</div>
+        </div>
+    <h3 class="desc-product-title">Avaliações</h3>
+
+      <!-- REVIEW 1 -->
+      <div class="review-card ">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Yara G.</div>
+            <div class="review-date">28 de fevereiro de 2026</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Recomendo!</div>
+        <div class="review-text">Muito satisfeito! Produto de excelente qualidade.</div>
+      </div>
+      <!-- REVIEW 2 -->
+      <div class="review-card ">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Yara L.</div>
+            <div class="review-date">7 de fevereiro de 2026</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Chegou rápido</div>
+        <div class="review-text">Perfeito! Exatamente como descrito. Muito contente.</div>
+      </div>
+      <!-- REVIEW 3 -->
+      <div class="review-card ">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Lourenço O.</div>
+            <div class="review-date">11 de novembro de 2025</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Excelente qualidade</div>
+        <div class="review-text">Muito bom, chegou conforme esperado. Recomendo.</div>
+      </div>
+      <!-- REVIEW 4 -->
+      <div class="review-card ">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Yara I.</div>
+            <div class="review-date">2 de janeiro de 2026</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Exatamente o que procurava</div>
+        <div class="review-text">Muito bom, funciona perfeitamente. Recomendo.</div>
+      </div>
+      <!-- REVIEW 5 -->
+      <div class="review-card ">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Josefina C.</div>
+            <div class="review-date">20 de janeiro de 2026</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Muito satisfeito com a compra</div>
+        <div class="review-text">Muito bom, chegou conforme esperado. Recomendo.</div>
+      </div>
+      <!-- REVIEW 6 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Zacarias P.</div>
+            <div class="review-date">16 de janeiro de 2026</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Perfeito!</div>
+        <div class="review-text">Excelente relação qualidade-preço. Muito bom mesmo.</div>
+      </div>
+      <!-- REVIEW 7 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Patrícia C.</div>
+            <div class="review-date">30 de novembro de 2025</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Perfeito!</div>
+        <div class="review-text">Muito bom, chegou rápido e bem embalado.</div>
+      </div>
+      <!-- REVIEW 8 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Filipa H.</div>
+            <div class="review-date">24 de novembro de 2025</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px; background:#ccc;">★</div></div>
+        <div class="review-title">Muito recomendado</div>
+        <div class="review-text">Adorei! Muito bom mesmo. Voltaria a comprar com certeza.</div>
+      </div>
+      <!-- REVIEW 9 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Diogo K.</div>
+            <div class="review-date">26 de janeiro de 2026</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Produto de qualidade</div>
+        <div class="review-text">Chegou conforme descrito. Muito bom, recomendo.</div>
+      </div>
+      <!-- REVIEW 10 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">João R.</div>
+            <div class="review-date">13 de janeiro de 2026</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Muito bom!</div>
+        <div class="review-text">Produto excelente. Entrega rápida. Muito contente.</div>
+      </div>
+      <!-- REVIEW 11 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Fernanda T.</div>
+            <div class="review-date">11 de dezembro de 2025</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Chegou rápido</div>
+        <div class="review-text">Perfeito! Uso diariamente e funciona impecavelmente.</div>
+      </div>
+      <!-- REVIEW 12 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Óscar S.</div>
+            <div class="review-date">12 de novembro de 2025</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Superou expectativas</div>
+        <div class="review-text">Perfeito! Exatamente como descrito. Muito contente.</div>
+      </div>
+      <!-- REVIEW 13 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Urbano B.</div>
+            <div class="review-date">1 de dezembro de 2025</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Chegou conforme esperado</div>
+        <div class="review-text">Muito bom, chegou rápido e bem embalado.</div>
+      </div>
+      <!-- REVIEW 14 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Paulo C.</div>
+            <div class="review-date">8 de janeiro de 2026</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px; background:#ccc;">★</div></div>
+        <div class="review-title">Adorei!</div>
+        <div class="review-text">Produto muito bom. Entrega rápida. Muito contente.</div>
+      </div>
+      <!-- REVIEW 15 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Josefina C.</div>
+            <div class="review-date">14 de novembro de 2025</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Qualidade excelente</div>
+        <div class="review-text">Muito bom! Chegou rápido e bem acondicionado.</div>
+      </div>
+      <!-- REVIEW 16 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Carlos I.</div>
+            <div class="review-date">7 de novembro de 2025</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Muito bom mesmo</div>
+        <div class="review-text">Excelente qualidade. Muito satisfeito com a compra.</div>
+      </div>
+      <!-- REVIEW 17 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Marta N.</div>
+            <div class="review-date">7 de dezembro de 2025</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Muito satisfeito</div>
+        <div class="review-text">Muito satisfeito! Produto de excelente qualidade.</div>
+      </div>
+      <!-- REVIEW 18 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Eufémia K.</div>
+            <div class="review-date">25 de novembro de 2025</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Qualidade excelente</div>
+        <div class="review-text">Muito bom, exatamente como descrito. Estou muito satisfeito.</div>
+      </div>
+      <!-- REVIEW 19 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Yara T.</div>
+            <div class="review-date">16 de novembro de 2025</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Bem embalado</div>
+        <div class="review-text">Excelente! Muito satisfeito com a qualidade.</div>
+      </div>
+      <!-- REVIEW 20 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Duarte F.</div>
+            <div class="review-date">3 de março de 2026</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Adorei!</div>
+        <div class="review-text">Produto de qualidade. Entrega rápida. Tudo perfeito!</div>
+      </div>
+      <!-- REVIEW 21 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">André M.</div>
+            <div class="review-date">1 de março de 2026</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Muito bom mesmo</div>
+        <div class="review-text">Chegou conforme descrito. Muito bom, recomendo.</div>
+      </div>
+      <!-- REVIEW 22 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Narciso D.</div>
+            <div class="review-date">17 de novembro de 2025</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Voltaria a comprar</div>
+        <div class="review-text">Perfeito! Exatamente como descrito.</div>
+      </div>
+      <!-- REVIEW 23 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Estêvão L.</div>
+            <div class="review-date">12 de dezembro de 2025</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Chegou conforme esperado</div>
+        <div class="review-text">Perfeito! Exatamente como descrito.</div>
+      </div>
+      <!-- REVIEW 24 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Valéria M.</div>
+            <div class="review-date">4 de dezembro de 2025</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px; background:#ccc;">★</div></div>
+        <div class="review-title">Adorei!</div>
+        <div class="review-text">Ótima qualidade pelo preço. Superou as minhas expectativas.</div>
+      </div>
+      <!-- REVIEW 25 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Lourenço M.</div>
+            <div class="review-date">16 de dezembro de 2025</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px; background:#ccc;">★</div></div>
+        <div class="review-title">Muito contente</div>
+        <div class="review-text">Perfeito! Exatamente como descrito na página.</div>
+      </div>
+      <!-- REVIEW 26 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Miguel D.</div>
+            <div class="review-date">31 de dezembro de 2025</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Exatamente como descrito</div>
+        <div class="review-text">Excelente qualidade. Muito satisfeito com a compra.</div>
+      </div>
+      <!-- REVIEW 27 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Graça J.</div>
+            <div class="review-date">17 de dezembro de 2025</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Adorei!</div>
+        <div class="review-text">Excelente qualidade. Muito satisfeito com a compra.</div>
+      </div>
+      <!-- REVIEW 28 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Filipa T.</div>
+            <div class="review-date">3 de março de 2026</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Muito bom!</div>
+        <div class="review-text">Perfeito! Exatamente como descrito.</div>
+      </div>
+      <!-- REVIEW 29 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Raquel G.</div>
+            <div class="review-date">26 de janeiro de 2026</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Recomendo vivamente</div>
+        <div class="review-text">Excelente qualidade. Muito satisfeito com a compra.</div>
+      </div>
+      <!-- REVIEW 30 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Lourenço M.</div>
+            <div class="review-date">6 de janeiro de 2026</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Recomendo a todos</div>
+        <div class="review-text">Perfeito! Exatamente como descrito na página.</div>
+      </div>
+      <!-- REVIEW 31 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Diogo E.</div>
+            <div class="review-date">10 de fevereiro de 2026</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Muito bom</div>
+        <div class="review-text">Adorei! Recomendo a todos os meus amigos.</div>
+      </div>
+      <!-- REVIEW 32 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Rui L.</div>
+            <div class="review-date">18 de dezembro de 2025</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Exatamente o que procurava</div>
+        <div class="review-text">Adorei! É exatamente o que precisava. Muito recomendado.</div>
+      </div>
+      <!-- REVIEW 33 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">José L.</div>
+            <div class="review-date">28 de dezembro de 2025</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Perfeito!</div>
+        <div class="review-text">Muito bom, mas a entrega demorou um pouco mais que o esperado.</div>
+      </div>
+      <!-- REVIEW 34 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Delfina R.</div>
+            <div class="review-date">20 de novembro de 2025</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Adorei!</div>
+        <div class="review-text">Chegou conforme descrito. Muito bom, recomendo.</div>
+      </div>
+      <!-- REVIEW 35 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Perpétua P.</div>
+            <div class="review-date">27 de dezembro de 2025</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Muito bom</div>
+        <div class="review-text">Muito bom! Estou muito satisfeito com a compra.</div>
+      </div>
+      <!-- REVIEW 36 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Vitor A.</div>
+            <div class="review-date">26 de novembro de 2025</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Perfeito para o preço</div>
+        <div class="review-text">Chegou conforme descrito. Muito bom, recomendo.</div>
+      </div>
+      <!-- REVIEW 37 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Gertrudes M.</div>
+            <div class="review-date">21 de fevereiro de 2026</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Exatamente como descrito</div>
+        <div class="review-text">Perfeito! Uso diariamente e funciona impecavelmente.</div>
+      </div>
+      <!-- REVIEW 38 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">José K.</div>
+            <div class="review-date">12 de novembro de 2025</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Voltaria a comprar</div>
+        <div class="review-text">Perfeito! Exatamente o que eu queria.</div>
+      </div>
+      <!-- REVIEW 39 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Silvério S.</div>
+            <div class="review-date">23 de fevereiro de 2026</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Perfeito!</div>
+        <div class="review-text">Perfeito! Exatamente como descrito.</div>
+      </div>
+      <!-- REVIEW 40 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Gertrudes F.</div>
+            <div class="review-date">24 de janeiro de 2026</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Muito satisfeito</div>
+        <div class="review-text">Muito bom! Chegou conforme esperado.</div>
+      </div>
+      <!-- REVIEW 41 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Diogo T.</div>
+            <div class="review-date">5 de novembro de 2025</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Exatamente o que procurava</div>
+        <div class="review-text">Excelente qualidade. Muito satisfeito.</div>
+      </div>
+      <!-- REVIEW 42 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Óscar M.</div>
+            <div class="review-date">23 de novembro de 2025</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Exatamente como descrito</div>
+        <div class="review-text">Muito bom, chegou conforme esperado. Recomendo.</div>
+      </div>
+      <!-- REVIEW 43 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Conceição R.</div>
+            <div class="review-date">18 de fevereiro de 2026</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Muito bom mesmo</div>
+        <div class="review-text">Muito bom! Estou muito contente com a compra.</div>
+      </div>
+      <!-- REVIEW 44 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Baltazar M.</div>
+            <div class="review-date">3 de março de 2026</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Muito contente</div>
+        <div class="review-text">Muito bom, mas a entrega demorou um pouco mais que o esperado.</div>
+      </div>
+      <!-- REVIEW 45 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Conceição F.</div>
+            <div class="review-date">16 de fevereiro de 2026</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Adorei!</div>
+        <div class="review-text">Muito bom, chegou rápido e bem acondicionado.</div>
+      </div>
+      <!-- REVIEW 46 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Fernanda M.</div>
+            <div class="review-date">16 de janeiro de 2026</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Recomendo!</div>
+        <div class="review-text">Muito bom! Estou muito satisfeito com a compra.</div>
+      </div>
+      <!-- REVIEW 47 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Zita L.</div>
+            <div class="review-date">5 de novembro de 2025</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Muito contente</div>
+        <div class="review-text">Muito satisfeito com a compra. Voltaria a comprar.</div>
+      </div>
+      <!-- REVIEW 48 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Cristina K.</div>
+            <div class="review-date">28 de dezembro de 2025</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px; background:#ccc;">★</div></div>
+        <div class="review-title">Perfeito!</div>
+        <div class="review-text">Muito bom, mas a entrega demorou um pouco mais que o esperado.</div>
+      </div>
+      <!-- REVIEW 49 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Pedro M.</div>
+            <div class="review-date">31 de dezembro de 2025</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Exatamente o que procurava</div>
+        <div class="review-text">Perfeito! Exatamente como descrito. Muito contente.</div>
+      </div>
+      <!-- REVIEW 50 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Zita M.</div>
+            <div class="review-date">11 de dezembro de 2025</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Exatamente como descrito</div>
+        <div class="review-text">Muito bom, exatamente como descrito. Estou muito satisfeito.</div>
+      </div>
+      <!-- REVIEW 51 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Valéria S.</div>
+            <div class="review-date">22 de janeiro de 2026</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Qualidade excelente</div>
+        <div class="review-text">Excelente relação qualidade-preço. Muito bom mesmo.</div>
+      </div>
+      <!-- REVIEW 52 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Paulo S.</div>
+            <div class="review-date">1 de fevereiro de 2026</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Muito satisfeito</div>
+        <div class="review-text">Perfeito! Exatamente como descrito. Muito contente.</div>
+      </div>
+      <!-- REVIEW 53 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Sérgio K.</div>
+            <div class="review-date">15 de fevereiro de 2026</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Muito satisfeito</div>
+        <div class="review-text">Adorei! Muito bom mesmo. Voltaria a comprar.</div>
+      </div>
+      <!-- REVIEW 54 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Tiago F.</div>
+            <div class="review-date">9 de dezembro de 2025</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Produto de qualidade</div>
+        <div class="review-text">Muito satisfeito! Produto de excelente qualidade.</div>
+      </div>
+      <!-- REVIEW 55 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Tiago J.</div>
+            <div class="review-date">24 de dezembro de 2025</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Exatamente como descrito</div>
+        <div class="review-text">Excelente! Chegou rápido e em perfeito estado.</div>
+      </div>
+      <!-- REVIEW 56 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Joana A.</div>
+            <div class="review-date">4 de dezembro de 2025</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Perfeito!</div>
+        <div class="review-text">Adorei! Muito bom mesmo. Voltaria a comprar.</div>
+      </div>
+      <!-- REVIEW 57 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Rita F.</div>
+            <div class="review-date">29 de janeiro de 2026</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px; background:#ccc;">★</div></div>
+        <div class="review-title">Entrega rápida e bem embalado</div>
+        <div class="review-text">Perfeito! Exatamente o que procurava.</div>
+      </div>
+      <!-- REVIEW 58 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Diogo M.</div>
+            <div class="review-date">3 de fevereiro de 2026</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Adorei!</div>
+        <div class="review-text">Adorei! Recomendo vivamente a todos.</div>
+      </div>
+      <!-- REVIEW 59 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Lourenço P.</div>
+            <div class="review-date">15 de janeiro de 2026</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px; background:#ccc;">★</div></div>
+        <div class="review-title">Recomendo vivamente</div>
+        <div class="review-text">Adorei! Muito bom mesmo. Voltaria a comprar.</div>
+      </div>
+      <!-- REVIEW 60 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Neves M.</div>
+            <div class="review-date">3 de dezembro de 2025</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Chegou rápido</div>
+        <div class="review-text">Muito bom, exatamente como descrito. Estou muito satisfeito.</div>
+      </div>
+      <!-- REVIEW 61 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Bruno G.</div>
+            <div class="review-date">18 de janeiro de 2026</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px; background:#ccc;">★</div></div>
+        <div class="review-title">Muito bom mesmo</div>
+        <div class="review-text">Muito bom, chegou rápido e bem embalado.</div>
+      </div>
+      <!-- REVIEW 62 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Cristina T.</div>
+            <div class="review-date">12 de novembro de 2025</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Muito satisfeito</div>
+        <div class="review-text">Muito bom! Chegou rápido e bem embalado.</div>
+      </div>
+      <!-- REVIEW 63 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Sérafina H.</div>
+            <div class="review-date">11 de dezembro de 2025</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Produto muito bom</div>
+        <div class="review-text">Muito bom, mas a entrega demorou um pouco mais que o esperado.</div>
+      </div>
+      <!-- REVIEW 64 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Narciso C.</div>
+            <div class="review-date">23 de novembro de 2025</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div></div>
+        <div class="review-title">Excelente qualidade</div>
+        <div class="review-text">Produto muito bom. Entrega rápida. Muito contente.</div>
+      </div>
+      <!-- REVIEW 65 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Óscar B.</div>
+            <div class="review-date">24 de novembro de 2025</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px; background:#ccc;">★</div></div>
+        <div class="review-title">Chegou conforme esperado</div>
+        <div class="review-text">Perfeito! Exatamente o que procurava.</div>
+      </div>
+      <!-- REVIEW 66 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Leopoldo L.</div>
+            <div class="review-date">31 de dezembro de 2025</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px; background:#ccc;">★</div></div>
+        <div class="review-title">Perfeito!</div>
+        <div class="review-text">Muito satisfeito com a compra. Voltaria a comprar.</div>
+      </div>
+      <!-- REVIEW 67 -->
+      <div class="review-card hidden">
+        <div class="review-top">
+          <div class="review-meta">
+            <div class="review-name">Miguel M.</div>
+            <div class="review-date">11 de fevereiro de 2026</div>
+            <div class="review-verified">✓ Compra verificada</div>
+          </div>
+        </div>
+        <div class="tp-stars-inline"><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px;">★</div><div class="tp-star-box" style="width:14px; height:14px; font-size:9px; background:#ccc;">★</div></div>
+        <div class="review-title">Adorei!</div>
+        <div class="review-text">Muito satisfeito com a compra. Voltaria a comprar.</div>
+      </div>
+      <button class="show-more-reviews" id="show-more-reviews">Ver mais avaliações ↓</button>
+    </div>
+
+    <!-- FAQ -->
+    <div class="faq-section">
+      <div class="faq-title">Perguntas Frequentes</div>
+      <div class="faq-item">
+        <div class="faq-question">É preciso carta de condução? <span class="faq-chevron">▼</span></div>
+        <div class="faq-answer">Não! Bicicletas elétricas com motor até 250W e velocidade máxima de 25 km/h não exigem
+          carta, seguro ou matrícula em Portugal. É 100% legal.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Quanto tempo demora o envio? <span class="faq-chevron">▼</span></div>
+        <div class="faq-answer">O envio é gratuito para todo o Portugal Continental e demora normalmente 2-4 dias úteis.
+          Para as ilhas (Açores e Madeira), 5-7 dias úteis.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Como funciona a garantia? <span class="faq-chevron">▼</span></div>
+        <div class="faq-answer">Oferecemos 2 anos de garantia em todos os componentes. A bateria tem garantia de 1 ano.
+          Se algo correr mal, tratamos de tudo — recolha e reparação sem custos adicionais.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">A bicicleta vem montada? <span class="faq-chevron">▼</span></div>
+        <div class="faq-answer">A bicicleta vem 95% montada. Só precisa de ajustar o guiador e os pedais, o que demora
+          cerca de 15-20 minutos. Incluímos ferramentas e manual ilustrado em português.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Posso devolver se não gostar? <span class="faq-chevron">▼</span></div>
+        <div class="faq-answer">Claro! Tem 30 dias para devolver sem qualquer justificação. Reembolsamos o valor total
+          após recebermos o produto em bom estado.</div>
+      </div>
+    </div>
+
+    <!-- PAYMENT METHODS -->
+    
+    <div class="payment-section">
+      <div class="payment-title">Métodos de Pagamento Aceites</div>
+      
+      <div class="payment-row-new">
+        <div class="payment-box"><img src="https://img.icons8.com/color/48/visa.png" alt="Visa"></div>
+        <div class="payment-box"><img src="https://img.icons8.com/color/48/mastercard-logo.png" alt="Mastercard"></div>
+        <div class="payment-box"><img src="https://img.icons8.com/color/48/amex.png" alt="Amex"></div>
+        <div class="payment-box"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal"></div>
+        <div class="payment-box"><img src="https://img.icons8.com/color/48/apple-pay.png" alt="Apple Pay"></div>
+        <div class="payment-box"><img src="https://img.icons8.com/color/48/google-pay.png" alt="Google Pay"></div>
+      </div>
+    
+    </div>
+    
+
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <p>© 2026 VoltRide Portugal. Todos os direitos reservados.</p>
+      <p style="margin-top:6px;">Termos e Condições · Política de Privacidade · Devoluções</p>
+    </div>
+
+  </div>
+
+  <!-- STICKY BAR -->
+  <div class="sticky-bar">
+    <div class="sticky-bar-info">
+      <div>
+        <span class="sticky-bar-price">69,90€</span>
+        <span class="sticky-bar-original">129,90€</span>
+      </div>
+      <span style="font-size:12px;color:#16a34a;font-weight:600">Envio Grátis</span>
+    </div>
+    <button class="buy-btn" onclick="alert('Redirecionando para pagamento seguro...')">
+      Comprar agora
+    </button>
+  </div>
+
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+  // CAROUSEL
+  const track = document.querySelector('.carousel-track');
+  const dots = document.querySelectorAll('.carousel-dots .dot');
+  const imgs = document.querySelectorAll('.carousel-track img');
+  let current = 0;
+  const total = imgs.length;
+
+  function goTo(i) {
+    current = (i + total) % total;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    dots.forEach((d, idx) => d.classList.toggle('active', idx === current));
+  }
+
+  document.querySelector('.carousel-arrow.prev')?.addEventListener('click', () => goTo(current - 1));
+  document.querySelector('.carousel-arrow.next')?.addEventListener('click', () => goTo(current + 1));
+  dots.forEach((d, i) => d.addEventListener('click', () => goTo(i)));
+
+  // Touch swipe
+  let startX = 0;
+  const carousel = document.querySelector('.carousel');
+  carousel?.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+  carousel?.addEventListener('touchend', e => {
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) goTo(current + (diff > 0 ? 1 : -1));
+  });
+
+  // Auto-slide
+  let autoSlide = setInterval(() => goTo(current + 1), 4500);
+  carousel?.addEventListener('touchstart', () => clearInterval(autoSlide));
+
+  // QUANTITY
+  const qtyVal = document.getElementById('qty-value');
+  const priceEl = document.querySelector('.price-current');
+  const stickyPrice = document.querySelector('.sticky-bar-price');
+  const basePrice = 69.90;
+
+  document.getElementById('qty-minus')?.addEventListener('click', () => {
+    let v = parseInt(qtyVal.textContent);
+    if (v > 1) { v--; qtyVal.textContent = v; updatePrice(v); }
+  });
+  document.getElementById('qty-plus')?.addEventListener('click', () => {
+    let v = parseInt(qtyVal.textContent);
+    if (v < 5) { v++; qtyVal.textContent = v; updatePrice(v); }
+  });
+
+  function updatePrice(q) {
+    const p = (basePrice * q).toFixed(2).replace('.', ',');
+    priceEl.textContent = `${p}€`;
+    if (stickyPrice) stickyPrice.textContent = `${p}€`;
+  }
+
+  // VARIANT SELECTION
+  document.querySelectorAll('.variant-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.closest('.variant-options').querySelectorAll('.variant-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+
+  // STICKY BAR
+  const buySection = document.querySelector('.buy-section');
+  const stickyBar = document.querySelector('.sticky-bar');
+  if (buySection && stickyBar) {
+    const obs = new IntersectionObserver(entries => {
+      stickyBar.classList.toggle('visible', !entries[0].isIntersecting);
+    }, { threshold: 0 });
+    obs.observe(buySection);
+  }
+
+  // FAQ ACCORDION
+  document.querySelectorAll('.faq-question').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.closest('.faq-item');
+      document.querySelectorAll('.faq-item').forEach(i => { if (i !== item) i.classList.remove('open'); });
+      item.classList.toggle('open');
+    });
+  });
+
+  // SHOW MORE REVIEWS
+  const showMoreBtn = document.getElementById('show-more-reviews');
+  const hiddenReviews = document.querySelectorAll('.review-card.hidden');
+  if (showMoreBtn) {
+    showMoreBtn.addEventListener('click', () => {
+      hiddenReviews.forEach(r => r.classList.remove('hidden'));
+      showMoreBtn.style.display = 'none';
+    });
+  }
+
+  // COUNTDOWN TIMER
+  const timerEl = document.getElementById('countdown');
+  if (timerEl) {
+    let mins = 14, secs = 59;
+    setInterval(() => {
+      if (secs === 0) { if (mins === 0) return; mins--; secs = 59; }
+      else secs--;
+      timerEl.textContent = `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+    }, 1000);
+  }
+});
+
+</script>
+</body>
+
+</html>
